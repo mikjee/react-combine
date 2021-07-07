@@ -8,7 +8,7 @@ import {
 	setInputs,
 	renameLayer,
 	getProjection
-} from './core'
+} from '../framework/core'
 
 const compositesReducer = (composites = [], action, globalState) => {
 

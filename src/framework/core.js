@@ -1,6 +1,6 @@
 import _ from "lodash"
 
-import { arrayShallowEqual } from "./helpers"
+import { arrayShallowEqual } from "../misc/helpers"
 
 // Supported hooks - onMount, onInput, onDelete, onRename, onChangeParent, onChangeChildren, canParent
 import { getHookAPI } from './API'

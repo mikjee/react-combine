@@ -1,10 +1,13 @@
-import reducerMap from './reducers'
-import Combine from './Combine'
-import applyEnhancers from './applyEnhancers'
-import { canParent } from './core'
-import { getUserAPI } from './API.js'
+import reducerMap from './src/redux/reducers'
+import applyEnhancers from './src/redux/applyEnhancers'
+
+import Combine from './src/components/Combine'
+
+import { canParent } from './src/framework/core'
+import { getUserAPI } from './src/framework/API'
 
 export default Combine
+
 export {
 	applyEnhancers,
 	reducerMap,

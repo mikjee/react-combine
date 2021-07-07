@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react'
 import { useDispatch } from 'react-redux'
-import { useGlobalState } from './helpers'
+import { useGlobalState } from '../misc/helpers'
 
 import Layer from './Layer'
-import { getPreAPI } from './API'
+import { getPreAPI } from '../framework/API'
 
 const Combine = ({ entrypoint, inject }) => {
 	const dispatch = useDispatch()

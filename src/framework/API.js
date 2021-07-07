@@ -12,7 +12,7 @@ import {
 	getProjection
 } from './core'
 
-import Layer from './Layer'
+import Layer from '../components/Layer'
 
 import { 
 	registerMethodHandler, 
