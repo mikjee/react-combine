@@ -1,0 +1,24 @@
+{
+  "name": "react-combine",
+  "version": "0.0.1",
+  "description": "Combine is a Javascript framework for building WYSIWYG interfaces.",
+  "homepage": "https://github.com/mikjee/react-combine",
+  "author": "Mik Jee (https://github.com/mikjee)",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "react": "^17.0.1",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5"
+  },
+  "devDependencies": {
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "scripts": {
+    "test": ""
+  }
+}
