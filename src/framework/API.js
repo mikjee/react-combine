@@ -134,7 +134,7 @@ export const getUserAPI = store => {
 
 		deleteLayer: (layerId) => ({ type: 'COMBINE_LAYER_DELETE', payload: { layerId } }),
 
-		setParent: (layerId, newParent, allowOrphan) => ({ type: 'COMBINE_LAYER_PARENT', payload: { layerId, newParent }, allowOrphan }),
+		setParent: (layerId, parent, allowOrphan) => ({ type: 'COMBINE_LAYER_PARENT', payload: { layerId, parent }, allowOrphan }),
 
 		reorderChildren: (children) => ({ type: 'COMBINE_REORDER_CHILDREN', payload: { children } }),
 
@@ -159,7 +159,7 @@ export const getUserAPI = store => {
 
 	const uAPI = {
 		layers: new Proxy({}, { get: (_, id) => proxifyLayerState(globalState, id)} ),
-		layerStates: new Proxy({}, { get: (_, key) => store.getState()[key] }),
+		layerStates: new Proxy({}, { get: (_, key) => store.getState().layers[key] }),
 
 		actions,
 		store,
