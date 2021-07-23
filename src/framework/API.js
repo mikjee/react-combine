@@ -20,8 +20,7 @@ import {
 	registerEventHandler,
 	unregisterEventHandler,
 	callMethod,
-	handleEvent,
-	registerUserReducer
+	handleEvent
 } from './events'
 
 const supportedDOMEvents = {
@@ -36,6 +35,8 @@ const supportedDOMEvents = {
 	onMouseLeave: 'mouseleave',
 	onWheel: 'wheel',
 }
+
+// TODO: Add other events - input, load etc.
 
 const proxifyLayerState = (globalState, layerId) => {
 
@@ -81,6 +82,13 @@ export const getPreAPI = (globalState, inject, dispatch) => {
 			{...props}
 			preAPI={preAPI}
 		/>
+
+		const actions = {
+			setInputs: (inputs) => ({ type: 'COMBINE_LAYER_INPUTS', payload: { layerId, inputs } })
+		}
+
+		layerAPI.actions = actions
+		layerAPI.dispatch = dispatch
 
 		layerAPI.DOMEventHandlers = {}
 		Object.keys(supportedDOMEvents).forEach(DOMAttribute => {

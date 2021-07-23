@@ -3,7 +3,7 @@ import applyEnhancers from './src/redux/applyEnhancers'
 
 import Combine from './src/components/Combine'
 
-import {
+import { 
 	generateLayerId,
 	createLayer,
 	deleteLayer,
